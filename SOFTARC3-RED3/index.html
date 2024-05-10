@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplly.skills.Red3</title>
+    <style>
+        body {
+            background-color: grey;
+        }
+        .navbar {
+            background-color: lightseagreen;
+            overflow: hidden;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: red;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .navbar .icon {
+            display: none;
+        }
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+        .dropdown .dropbtn {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: red;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+        .navbar a:hover,
+        .dropdown:hover .dropbtn {
+            background-color: black;
+            color: white;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px red;
+            z-index: 1;
+        }
+        .dropdown-content a {
+            float: none;
+            color: red;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        .dropdown-content a:hover {
+            background-color: black;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        @media screen and (max-width: 800px) {
+            .navbar a:not(:first-child),
+            .dropdown .dropbtn {
+                display: none;
+            }
+            .navbar a.icon {
+                float: right;
+                display: block;
+            }
+            .navbar a:hover,
+            .dropdown:hover .dropbtn {
+                background-color: white;
+                color: black;
+            }
+            .dropdown-content a:hover {
+                background-color: goldenrod;
+            }
+        }
+        @media screen and (max-width: 800px) {
+            .navbar.responsive .icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+            .navbar.responsive a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+            .navbar.responsive .dropdown {
+                float: none;
+            }
+            .navbar.responsive .dropdown-content {
+                position: relative;
+            }
+            .navbar.responsive .dropdown .dropbtn {
+                display: block;
+                width: 100%;
+                text-align: left;
+            }
+        }
+        .style {
+            text-align: center;
+        }
+        .list ul{
+            list-style-type: none;
+        }
+        .theme h2{
+            padding: 15px; 
+            text-align: center;
+        }
+        .hah {
+  background-color: lightseagreen;
+  overflow: hidden;
+  text-align: center;
+  font-size: 18px;
+  display: block;
+  padding: 0;
+  border: none;
+}
+hr {
+  width: 85%;
+  box-shadow: 0 0 3px red;
+  animation: glowMinr 2s ease-in-out;
+  -webkit-animation: glow 1.5s ease-in-out infinite;
+}
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 2px red;
+  }
+  50% {
+    box-shadow: 0 0 8px red;
+  }
+  100% {
+    box-shadow: 0 0 2px red;
+  }
+}
+h2{
+    padding-left: 5%;
+}
+.container {
+      display: flex;
+      align-items: center;
+      padding-left: 5%;
+    }
+
+    .image img {
+      max-width: 100%;
+      max-height: 100%;
+      width: 550px;
+    }
+
+    .text {
+      font-size: 17px;
+      padding-left: 20px;
+    }
+    .pdf {
+      height: 800px;
+      width: 800px;
+      max-height: 100%;
+      max-width: 100%;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="navbar" id="myNavbar">
+        <a href="../index.html">Home</a>
+        <div class="dropdown">
+            <button class="dropbtn">Web-Project
+            </button>
+            <div class="dropdown-content">
+                <a href="../bmi.html">BMI</a>
+                <a href="../history.html">History</a>
+                <a href="../reference.html">Reference</a>
+                <a href="../https://t.fachtnaroe.net">About</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Sofware Architecture
+            </button>
+            <div class="dropdown-content">
+                <a href="../SOFTARC1-RED3/index.html">Moder methodlogy</a>
+                <a href="../SOFTARC2-RED3/index.html">Pair Programming</a>  
+                <a href="../SOFTARC3-RED3/index.html">Apply Skills</a>   
+                <a href="../SOFTARC4-RED3/index.html">UML</a>
+                <a href="../SOFTARC5-RED3/index.html">Use-case diagram</a>
+                <a href="../SOFTARC6-RED3/index.html">Use-case review</a>
+                <a href="../SOFTARC7-RED3/index.html">Waterfall</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">Work EXP
+            </button>
+            <div class="dropdown-content">
+                <a href="../WXP-DIARY-RED3/index.html">Diary</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">Mobile Tech
+            </button>
+            <div class="dropdown-content">
+                <a href="../MOBT1-RED3/index.html">Prototype app</a>
+                <a href="../MOBT2-RED3/index.html">Android Native Application</a>  
+                <a href="../MOBT3-RED3/index.html">Mast.skill-3</a>
+            </div>
+        </div>      
+        <a class="icon" href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
+    </div>
+    <h2>User manual:</h2>
+    <div class="container">
+        <div class="image">
+            <img src="images/user.manual.jfif" alt="User Manual">
+        </div>
+        <div class="text">
+            <h4>
+                Welcome to the user manual! This guide aims to provide you with the essential information to keeping your website up to date.
+This manual will help you navigate through our offerings effectively.
+Agile technology was used to achieve the best required efficiency.
+            </h4>
+        </div>
+    </div>
+<hr>
+<h2>Website Files:</h2>
+<div class="container">
+    <div class="image">
+        <img src="images/fillezilla.png" alt="fillezilla">
+    </div>
+    <div class="text">
+        <h4>Accessing Your Website Files and maintaining you need to log in into FileZilla (With given Host, Username, Password and Port). <br>
+            Navigate to the fails in FileZilla and then right mouse click on the fails witch one you want to edit or make changes (View/Edit).</h4>
+    </div>
+</div>
+<hr>
+<h2>Update Website:</h2>
+<div class="container">
+    <div class="image">
+        <img src="images/update.png" alt="Update">  
+    </div>
+    <div class="text">
+        <h4>Before I mention locate files in FileZilla (View/Edit), and it opens in your text editor Visual Studio Code, Notepad or other editor. <br>
+            Open the file which you want to update or change your content. Before making changes, updates make sure you have backup files just in <br>
+            case your updates break down website structures or other issues come up. <br>
+         </h4>
+    </div>
+</div>
+
+<div class="container">
+    <div class="image">
+        <img src="images/add.png" alt="Add">
+    </div>
+    <div class="text">
+        <h4>To add a new page create, a new folder or HTML file.</h4>
+    </div>
+</div>
+<div class="container">
+    <div class="image">
+        <img src="images/remove.png" alt="Remove" height="500">
+    </div>
+    <div class="text">
+        <h4>Deleting-removing files or folders you can do in your editor(If you are connected your editor to a remote host) or in FileZilla. <br>
+        Sometime you can see this for deleting/removing files (Delete permanently).</h4>
+    </div>
+</div>
+<hr>
+<h2>Upload files:</h2>
+<div class="container">
+    <div class="image">
+        <img src="images/upload.jpg" alt="upload">
+    </div>
+    <div class="text">
+        <h4>In the image we see two sites. The left site is local files (files are in your computer), in the right site it is remote host(server). <br>
+            After any updates or new HTML files, folders you need to upload them onto the server.</h4>
+    </div>
+</div>
+<hr>
+<h2>Testing:</h2>
+<div class="container">
+    <div class="image">
+        <img src="images/test.jfif" alt="Testing">
+    </div>
+    <div class="text">
+        <h4> After uploading the updates, it is necessary to perform a test to verify that everything is working correctly. <br>
+        Copy your website URL to test layout or others issues if appers. Make any changes if needed. <br>
+        <a href="https://validator.w3.org">Markup Validation Service</a> Markup validation test your HTML layout. <br>
+        <a href="https://jigsaw.w3.org/css-validator/">CSS Validation service</a> CSS validator test your CSS style layout. <br>
+        You can use others tools to test your website.  </h4>
+    </div>
+</div>
+<hr>
+<h2>Backups:</h2>
+<div class="container">
+    <div class="image">
+        <img src="images/backup.webp" alt="Backup files">
+    </div>
+    <div class="text">
+        <h4>It is important to make back up for your website files in case of server failure otherwise you may lose data.</h4>
+    </div>
+</div>
+<hr>
+<h2>Security for website:</h2>
+<div class="container">
+    <div class="image">
+        <img src="images/security.jfif" alt="Security">
+    </div>
+    <div class="text">
+        <h4>Use unique and strong password. and tools like two factor authentication, encrypt information have a plan for dealing with emergencies. <br>
+            Monitor your website for any unusual activitys.</h4>
+    </div>
+</div>
+<hr>
+<div>
+    <object class="pdf" data="User.Manual.pdf" type="application/pdf"></object>
+  </div>
+
+  <div>
+    <object class="pdf" data="SOFTARC-SKILLS3-2024-Apply-Tools.pdf" type="application/pdf"></object>
+    <br>
+    <a href="SOFTARC-SKILLS3-2024-Apply-Tools.pdf">Dowloading</a>
+  </div>
+    <div class="hah">
+        <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Ft.fachtnaroe.net%2Fred%2F3%2FSOFTARC3-RED3%2Findex.html" rel="nofollow"
+            target="_blank">Validate</a>
+            &nbsp; &nbsp; &amp; &nbsp; &nbsp;
+            <a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Ft.fachtnaroe.net%2Fred%2F3%2FSOFTARC3-RED3%2Findex.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en" rel="nofollow"
+            target="_blank">Css Validate</a>
+      </div>
+      <script src="../assets/script/navbar.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,248 @@
+
+.navbar {
+    background-color: lightseagreen;
+    overflow: hidden;
+  
+  }
+  
+  .navbar a {
+    float: left;
+    display: block;
+    color: red;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  .navbar .icon {
+    display: none;
+  }
+  
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  
+  }
+  
+  .dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: red;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+  
+  .navbar a:hover,
+  .dropdown:hover .dropbtn {
+    background-color: black;
+    color: white;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px red;
+    z-index: 1;
+    
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: red;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: black;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+
+body {
+    background-color: rgb(4, 145, 145);
+}
+
+h2 {
+    color: rgb(0, 255, 64);
+    font-style: italic;
+    font-size: large;
+
+}
+
+table,
+th,
+td {
+    border: 3px solid black;
+    width: 30%;
+    border-collapse: collapse;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    column-gap: 50px;
+}
+
+td {
+    padding: 16px;
+}
+
+tr:nth-col(even) {
+    background-color: whitesmoke;
+}
+
+
+h2 {
+    color: rgb(0, 255, 64);
+    font-style: italic;
+    font-size: large;
+
+}
+
+table, th, td {
+    border: 3px solid black;
+    width: 30%;
+    border-collapse: collapse;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    column-gap: 50px;
+}
+
+td {
+    padding: 16px;
+}
+
+tr:nth-col(even) {
+    background-color: whitesmoke;
+}
+@media only screen and (max-width: 800px) {
+    .height {
+        color: rgb(194, 41, 41);
+        font-style: italic;
+    }
+
+    .weight {
+        color: rgb(194, 41, 41);
+        font-style: italic;
+    }
+
+
+    .bt {
+        border-radius: 50%;
+        color: cadetblue;
+    }
+    .topnav {
+        display: none;
+    }
+    .tb{
+        display: table-cell;
+        column-rule-style: doublep;
+    }
+}
+
+*
+{
+    box-sizing: border-box;
+}
+body
+{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: grey;
+}
+
+.column
+{
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+}
+.row
+{
+    margin: 0 --5px;
+}
+.row:after
+{
+    content: "";
+    display: table;
+    clear: both;
+}
+.card
+{
+    box-shadow: 0 12px 14px 0 rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    text-align: center;
+    border-radius: 15%;
+
+}
+@media screen and (max-width: 800px)
+{
+    .column 
+    {
+        width: 100%;
+        display: block;
+        margin-bottom: 25px;
+        
+    }
+}
+@media screen and (max-width: 800px) {
+    .navbar a:not(:first-child), .dropdown .dropbtn
+    {
+      display: none;
+    }
+    .navbar a.icon {
+      float: right;
+      display: block;
+    }
+    .navbar a:hover,
+  .dropdown:hover .dropbtn
+  {
+    background-color: white;
+    color: black;
+  }
+  .dropdown-content a:hover {
+    background-color: goldenrod;
+  }
+  
+  }
+  @media screen and (max-width: 800px) {
+    .navbar.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .navbar.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    .navbar.responsive .dropdown {
+      float: none;
+    }
+    .navbar.responsive .dropdown-content {
+      position: relative;
+    }
+    .navbar.responsive .dropdown .dropbtn {
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+  }
+  #hah {
+    background-color: lightseagreen;
+    overflow: hidden;
+    text-align: center;
+    font-size: 18px;
+    display: block;
+    padding: 0;
+    border: none;
+  }

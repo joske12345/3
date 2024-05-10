@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Waterfall.2.Red3</title>
+  <style>
+    body {
+      background-color: grey;
+    }
+
+    .navbar {
+      background-color: lightseagreen;
+      overflow: hidden;
+    }
+
+    .navbar a {
+      float: left;
+      display: block;
+      color: red;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    .navbar .icon {
+      display: none;
+    }
+
+    .dropdown {
+      float: left;
+      overflow: hidden;
+    }
+
+    .dropdown .dropbtn {
+      font-size: 16px;
+      border: none;
+      outline: none;
+      color: red;
+      padding: 14px 16px;
+      background-color: inherit;
+      font-family: inherit;
+      margin: 0;
+    }
+
+    .navbar a:hover,
+    .dropdown:hover .dropbtn {
+      background-color: black;
+      color: white;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px red;
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      float: none;
+      color: red;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+
+    .dropdown-content a:hover {
+      background-color: black;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    @media screen and (max-width: 800px) {
+
+      .navbar a:not(:first-child),
+      .dropdown .dropbtn {
+        display: none;
+      }
+
+      .navbar a.icon {
+        float: right;
+        display: block;
+      }
+
+      .navbar a:hover,
+      .dropdown:hover .dropbtn {
+        background-color: white;
+        color: black;
+      }
+
+      .dropdown-content a:hover {
+        background-color: goldenrod;
+      }
+    }
+
+    @media screen and (max-width: 800px) {
+      .navbar.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+
+      .navbar.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+      }
+
+      .navbar.responsive .dropdown {
+        float: none;
+      }
+
+      .navbar.responsive .dropdown-content {
+        position: relative;
+      }
+
+      .navbar.responsive .dropdown .dropbtn {
+        display: block;
+        width: 100%;
+        text-align: left;
+      }
+    }
+
+    hr {
+      width: 55%;
+      box-shadow: 0 0 3px red;
+      animation: glowMinr 2s ease-in-out;
+      -webkit-animation: glow 1.5s ease-in-out infinite;
+    }
+
+    @keyframes glow {
+      0% {
+        box-shadow: 0 0 2px red;
+      }
+
+      50% {
+        box-shadow: 0 0 8px red;
+      }
+
+      100% {
+        box-shadow: 0 0 2px red;
+      }
+    }
+
+    .pagination {
+      clear: both;
+      position: relative;
+      text-align: center;
+    }
+
+    .pagination a {
+      display: inline-block;
+      margin: 2px 2px 2px 0;
+      padding: 8px 16px;
+      color: #ddd;
+      background-color: lightseagreen;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    .pdf {
+      height: 800px;
+      width: 800px;
+      max-height: 100%;
+      max-width: 100%;
+    }
+
+    .hah {
+      background-color: lightseagreen;
+      overflow: hidden;
+      text-align: center;
+      font-size: 18px;
+      display: block;
+      padding: 0;
+      border: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="navbar" id="myNavbar">
+    <a href="../index.html">Home</a>
+    <div class="dropdown">
+      <button class="dropbtn">Web-Project
+      </button>
+      <div class="dropdown-content">
+        <a href="../bmi.html">BMI</a>
+        <a href="../history.html">History</a>
+        <a href="../reference.html">Reference</a>
+        <a href="https://t.fachtnaroe.net">About</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Sofware Architecture
+      </button>
+      <div class="dropdown-content">
+        <a href="../SOFTARC1-RED3/index.html">Moder methodlogy</a>
+        <a href="../SOFTARC2-RED3/index.html">Pair Programming</a>
+        <a href="../SOFTARC3-RED3/index.html">Apply Akills</a>
+        <a href="../SOFTARC4-RED3/index.html">UML</a>
+        <a href="../SOFTARC5-RED3/index.html">Use-case diagram</a>
+        <a href="../SOFTARC6-RED3/index.html">Use-case review</a>
+        <a href="../SOFTARC7-RED3/index.html">Waterfall</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Work EXP
+      </button>
+      <div class="dropdown-content">
+        <a href="../WXP-DIARY-RED3/index.html">Diary</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Mobile Tech
+      </button>
+      <div class="dropdown-content">
+        <a href="../MOBT1-RED3/index.html">Prototype app</a>
+        <a href="../MOBT2-RED3/index.html">Android Native Application</a>  
+        <a href="../MOBT3-RED3/index.html">Mast.skill-3</a>
+      </div>
+    </div>
+    <a class="icon" href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
+  </div>
+
+  <h2>Outline the key objects for each of the Waterfall stages so that you can assess success or failure of the stage.
+  </h2>
+  <h3>Requirements:</h3>
+  <p>Objects:</p>
+  <ol>
+    <li>Requirements documents.</li>
+    <li>Stakeholders feedback.</li>
+  </ol>
+  <p>Success criteria:</p>
+  <ol>
+    <li>Clear, complete requirements documented.</li>
+    <li>Stakeholders expectations with documented requirements.</li>
+  </ol>
+  <p>Failura criteria</p>
+  <ol>
+    <li>Incomplete requirements documented.</li>
+    <li>Stakeholders' expectations not addressed.</li>
+  </ol>
+  <h3>Design:</h3>
+  <p>Objects:</p>
+  <ol>
+    <li>Design Document.</li>
+    <li>Detailed Design Specifications.</li>
+  </ol>
+  <p>Success criteria:</p>
+  <ol>
+    <li>The structure of the system.</li>
+    <li>Detailed design specifies, and data flows</li>
+    <li>Design is aligns with requirements.</li>
+  </ol>
+  <p>Failura criteria</p>
+  <ol>
+    <li>Design lacks scalability and alignment with requirements.</li>
+    <li>architecture isarchitecture is incomplete.</li>
+    <li> Detailed design does not adequately.</li>
+  </ol>
+  <h3>Implementation:</h3>
+  <p>Objects:</p>
+  <ol>
+    <li>Source Code</li>
+    <li>Test Cases</li>
+  </ol>
+  <p>Success criteria:</p>
+  <ol>
+    <li>Code standards and best practices.</li>
+    <li>Unit tests pass, validating</li>
+    <li>Code is maintainable, and well documented.</li>
+  </ol>
+  <p>Failura criteria</p>
+  <ol>
+    <li>Code does not standards or best practices.</li>
+    <li> Tests fail, indicating defects in the code.</li>
+    <li>Code lacks documentation. </li>
+  </ol>
+  <h3>Verification:</h3>
+  <p>Objects:</p>
+  <ol>
+    <li>Verification Plan</li>
+    <li>Test Strategy</li>
+  </ol>
+  <p>Success criteria:</p>
+  <ol>
+    <li>Verification plan outlines the scope, objectives, resources, and schedule for verification activities.</li>
+    <li>Test strategy defines the approach, techniques, to be used for testing.</li>
+  </ol>
+  <p>Failura criteria</p>
+  <ol>
+    <li>Verification plan lacks clarity or does not cover all necessary aspects</li>
+    <li>Test strategy is not suitable for the project's requirements</li>
+  </ol>
+  <h3>Maintenance:</h3>
+  <p>Objects:</p>
+  <ol>
+    <li>Change Requests.</li>
+    <li>Bug Reports.</li>
+    <li>Maintenance Logs.</li>
+  </ol>
+  <p>Success criteria:</p>
+  <ol>
+    <li>Maintenance tasks are effectively managed and prioritized.</li>
+    <li>Bugs and issues are promptly fixed and tested.</li>
+    <li>Updates are successfully implemented without introducing new issues.</li>
+  </ol>
+  <p>Failura criteria</p>
+  <ol>
+    <li>Maintenance tasks are poorly managed.</li>
+    <li>Fixes or updates introduce new defects.</li>
+    <li>Lack of documentation or communication regarding maintenance.</li>
+  </ol>
+  <hr>
+
+  <h2>Include in your submission evidence to show completion of each stage.</h2>
+  <h3>Requirements:</h3>
+  <p>Evidence:</p>
+  <ol>
+    <li>Document detailing all gathered requirements, including functional and non functional.</li>
+    <li> Formal sign from stakeholders agreement and acceptance of the documented requirements.</li>
+    <li>Requirements document is approved by relevant stakeholders.</li>
+  </ol>
+  <h3>Design:</h3>
+  <p>Evidence:</p>
+  <ol>
+    <li>Design Document describes the overall system architecture, including major components.</li>
+    <li>Detailed specifications for each component, including data structures, algorithms.</li>
+    <li> Documentation of the review meeting where the design was presented and discussed.</li>
+  </ol>
+  <h3>Implementation:</h3>
+  <p>Evidence:</p>
+  <ol>
+    <li>Complete and commented codebase reflecting the implementation.</li>
+    <li>Test cases designed to validate and functionality.</li>
+    <li> Documentation of code review sessions and identified issues.</li>
+  </ol>
+  <h3>Verification:</h3>
+  <p>Evidence:</p>
+  <ol>
+    <li>Documentation of verification activities, including test plans, test results, and any issues or defects.</li>
+    <li> Records of identified defects or issues.</li>
+    <li>Verification reports provide a clear overview.</li>
+  </ol>
+  <h3>Maintenance:</h3>
+  <p>Evidence:</p>
+  <ol>
+    <li> Documentation of requested changes or software.</li>
+    <li> Records of reported bugs or issues.</li>
+    <li>Documentation of maintenance activities performed and outcomes.</li>
+  </ol>
+  <hr>
+
+  <h2>In your opinion, would the Web project completion process be more, or less, difficult if a wholly Agile process
+    were used?</h2>
+  <h3>Advantages of Agile:</h3>
+  <p>Agile lets you adjust your website as you go along. If you need to change something, you can do it quickly without
+    much hassle. <br>
+    Agile helps you get parts of your website done and out to people faster and improving your website sooner. <br>
+    Agile encourages everyone working on the website to talk and work together. Teamwork can help solve problems faster.
+    <br>
+    Agile makes sure your website is checked for mistakes regularly and makes people happy when they use it.</p>
+  <h3>Challenges of Agile:</h3>
+  <p> Agile needs clients to be involved and give feedback throughout the project. <br>
+    With Agile, it's easy to keep adding new things to your website. This can make it hard to stay focused on what's
+    most important. <br>
+    Agile doesn't focus much on planning everything out at the beginning. Lack of planning can cause problems later on.
+  </p>
+
+  <div>
+    <object class="pdf" data="SOFTARC-SKILLS7-2024-Waterfall-Web-Design.pdf" type="application/pdf"></object>
+    <br>
+    <a class="dow" href="SOFTARC-SKILLS7-2024-Waterfall-Web-Design.pdf">Dowloading</a>
+  </div>
+
+
+
+  <div id="pag">
+    <div class="pagination">
+      <a href="index.html">&laquo;</a>
+      <a href="index2.html">&raquo;</a>
+    </div>
+  </div>
+
+  <div class="hah">
+    <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Ft.fachtnaroe.net%2Fred%2F3%2FSOFTARC7-RED3%2Findex2.html"
+      rel="nofollow" target="_blank">Validate</a>
+    &nbsp; &nbsp; &amp; &nbsp; &nbsp;
+    <a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Ft.fachtnaroe.net%2Fred%2F3%2FSOFTARC7-RED3%2Findex2.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en"
+      rel="nofollow" target="_blank">Css Validate</a>
+  </div>
+
+
+  <script src="../assets/script/navbar.js"></script>
+</body>
+
+</html>

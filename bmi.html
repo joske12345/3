@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="assets/css/bmi.css"> 
+    <title>BMI calculator.Red3</title>
+
+</head>
+
+<body>
+    <!-- Navigation with dropdown menu -->
+    <div class="navbar" id="myNavbar">
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+           <button class="dropbtn">Web-Project
+           </button>
+            <div class="dropdown-content">
+                <a href="history.html">History</a>
+                <a href="reference.html">Reference</a>
+                <a href="https://t.fachtnaroe.net">About</a>
+            </div>
+        </div>
+            <div class="dropdown">
+                <button class="dropbtn">Sofware Architecture
+                </button>
+                <div class="dropdown-content">
+                  <a href="SOFTARC1-RED3/index.html">Moder methodlogy</a>
+                  <a href="SOFTARC2-RED3/index.html">Pair Programming</a>
+                  <a href="SOFTARC3-RED3/">Apply Skills</a>
+                  <a href="SOFTARC4-RED3/index.html">UML</a>
+                  <a href="SOFTARC5-RED3/index.html">Use-case diagram</a>
+                  <a href="SOFTARC6-RED3/index.html">Use-case review</a>
+                  <a href="SOFTARC7-RED3/index.html">Waterfall</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Work EXP
+                </button>
+                <div class="dropdown-content">
+                    <a href="WXP-DIARY-RED3/index.html">Diary</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Mobile Tech
+                </button>
+                <div class="dropdown-content">
+                    <a href="MOBT1-RED3/index.html">Prototype app</a>
+                    <a href="MOBT2-RED3/index.html">Android Native Application</a>  
+                    <a href="MOBT3-RED3/index.html">Mast.skill-3</a>
+                    
+                </div>
+            </div>
+            <a class="icon" href="javascript:void(0);"  onclick="myFunction()">&#9776;</a>
+    </div>
+    <br>
+    
+    <table class="tb">
+        <tr>
+            <td>
+                <h2>BMI CALCULATOR</h2>
+            </td>
+    </table>
+    <div>
+    <table>
+        <tr>
+            <td><strong>Height (in cm)
+                    <input type="text" id="height" class="height"></strong></td>
+        </tr>
+        <tr>
+            <td><strong>Weight (in kg)
+                    <input type="text" id="weight" class="weight"></strong></td>
+        </tr>
+        <tr>
+            <td>
+                <button id="btn" class="bt">Calculate</button>
+            </td>
+        </tr>
+        <tr>
+            <td><i>Result</i>
+                <div id="answer"></div>
+            </td>
+        </tr>
+    </table>
+    </div>
+
+    <br>
+    
+    <div class="row">
+        <div class="column">
+            <div class="card">
+                <h4>Underweight - less than 18.5</h4>
+                <p>You may not be eating enough or an underlying illness could be preventing you from gaining weight.
+                     Underweight adults are at increased risk of weakened immune system, fragile bones and may experience 
+                     low energy levels. If you struggle to gain weight, see a Doctor. </p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <h4>Normal - between 18.5 - 24.99</h4>
+                <p>Adults in the normal range are considered to have a healthy weight. Maintain it with regular exercise and a healthy diet.</p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <h4>Overweight - between 25 - 29.99</h4>
+                <p>A high proportion of adults fall into the overweight category. It may feel unfair to get a result like this. There are factors
+                     that may cause your BMI to be inaccurate - if you have high muscle bulk for example. That's why it's important to look at a 
+                     range of measurements to get a better overall picture of your health. However, this is a good time to make an honest assessment
+                     of your lifestyle to see if you should reduce calories in your diet or increase the calories you burn with exercise. The higher 
+                     you fall within this bracket the higher your risk of cardiovascular disease.</p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <h4>Obese or over 30</h4>
+                <p>Being obese significantly increases your risk of developing heart disease and type 2 diabetes. If you fall into this category you
+                     should see a Doctor and ask their advice on bringing down your weight.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="hah">
+        <a href="http://validator.w3.org/check?uri=https://t.fachtnaroe.net/red/3/bmi.html" rel="nofollow"
+        target="_blank">HTML Validate</a>
+        &nbsp; &nbsp; &amp; &nbsp; &nbsp;
+        <a href="https://jigsaw.w3.org/css-validator/check?uri=https://t.fachtnaroe.net/red/3/bmi.html"
+        rel="nofollow" target="_blank">CSS Validate</a>
+    </div>
+    <script src="assets/script/bmi.js"></script>
+    <script src="assets/script/navbar.js"></script>
+</body>
+
+</html>

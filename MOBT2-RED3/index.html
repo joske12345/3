@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="navbar" id="myNavbar">
+        <a href="../index.html">Home</a>
+        <div class="dropdown">
+            <button class="dropbtn">Web-Project
+            </button>
+            <div class="dropdown-content">
+                <a href="../bmi.html">BMI</a>
+                <a href="../history.html">History</a>
+                <a href="../reference.html">Reference</a>
+                <a href="https://t.fachtnaroe.net">About</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Sofware Architecture
+            </button>
+            <div class="dropdown-content">
+                <a href="../SOFTARC1-RED3/index.html">Moder Methodology</a>
+                <a href="../SOFTARC2-RED3/index.html">Pair Programming</a>
+                <a href="../SOFTARC3-RED3/index.html">Apply Skills</a>
+                <a href="../SOFTARC4-RED3/index.html">UML</a>
+                <a href="../SOFTARC5-RED3/index.html">Use-Case Diagram</a>
+                <a href="../SOFTARC6-RED3/index.html">Use-Case Review</a>
+                <a href="../SOFTARC7-RED3/index.html">Waterfall</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Work EXP
+            </button>
+            <div class="dropdown-content">
+                <a href="../WXP-DIARY-RED3/index.html">Diary</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Mobile Tech
+            </button>
+            <div class="dropdown-content">
+                <a href="../MOBT1-RED3/index.html">Prototype app</a>
+                <a href="../MOBT2-RED3/index.html">Android Native Application</a>
+                <a href="../MOBT3-RED3/index.html">Mast.skill-3</a>
+            </div>
+        </div>
+        <a class="icon" href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
+    </div>
+    <h2>Screen design sketches</h2>
+    <div class="conatiner">
+        <div class="image">
+            <img src="images/screen.design.png" alt="sketches">
+        </div>
+    </div>
+    <hr>
+
+    <h2>Work-flow diagram</h2>
+    <div class="conatiner">
+        <div class="image">
+            <img src="images/workflow.diagram.png" alt="Work flow diagram">
+        </div>
+    </div>
+    <hr>
+
+    <h2>UML use-case diagram</h2>
+    <div class="conatiner">
+        <div class="image">
+            <img src="images/uml.diagram.png" alt="UML use diagram">
+        </div>
+    </div>
+    <hr>
+
+    <h2>Final screen</h2>
+    <div class="conatiner">
+        <div class="image2">
+            <img src="images/splash.jpg" alt="splash screen">
+            <img src="images/bmi.jpg" alt="BMI">
+            <img src="images/pedometer.jpg" alt="pedometer">
+        </div>
+    </div>
+    <hr>
+
+    <h2>Splash.java</h2>
+    <div class="container">
+        <div class="img"></div>
+        <div class="text">
+            <h4>Splash Screen</h4>
+            <pre>
+                <code>
+                    package com.example.newbmi;
+
+                    import android.content.Intent;
+                    import android.os.Bundle;
+                    import android.os.Handler;
+                    import android.view.WindowManager;
+                    import android.widget.TextView;
+                    
+                    import androidx.appcompat.app.AppCompatActivity;
+                    
+                    public class Splash extends AppCompatActivity {
+                        TextView text;
+                    
+                            @Override
+                            protected void onCreate(Bundle savedInstanceState) {
+                                super.onCreate(savedInstanceState);
+                    
+                                //configuring our window to full screen
+                                getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                                        WindowManager.LayoutParams.FLAG_FULLSCREEN);
+                    
+                                setContentView(R.layout.splash);
+                    
+                                //run a task for specific time interval
+                    
+                                new Handler().postDelayed(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        Intent i = new Intent(Splash.this, MainActivity.class);
+                    
+                                        startActivity(i);
+                    
+                                        finish();
+                                    }
+                                }, 2500);
+                    
+                            }
+                    
+                            //ImageView;
+                    
+                        }
+                </code>                  
+            </pre>
+        </div>
+    </div>
+    <hr>
+
+    <h2>MainActivity.java</h2>
+    <div class="conatiner">
+        <div class="image">
+        </div>
+        <div class="text">
+            <h4>BMI Calculator</h4>
+            <pre>
+                    <code>
+                        package com.example.newbmi;
+
+                        import android.content.Intent;
+                        import android.view.View;
+                        import android.widget.ImageView;
+                        import com.google.appinventor.components.runtime.Button;
+                        import com.google.appinventor.components.runtime.Clock;
+                        import com.google.appinventor.components.runtime.Component;
+                        import com.google.appinventor.components.runtime.EventDispatcher;
+                        import com.google.appinventor.components.runtime.Form;
+                        import com.google.appinventor.components.runtime.HandlesEventDispatching;
+                        import com.google.appinventor.components.runtime.HorizontalArrangement;
+                        import com.google.appinventor.components.runtime.Label;
+                        import com.google.appinventor.components.runtime.PasswordTextBox;
+                        import com.google.appinventor.components.runtime.TextBox;
+                        import com.google.appinventor.components.runtime.VerticalArrangement;
+                        import com.google.appinventor.components.runtime.VerticalScrollArrangement;
+                        import com.google.appinventor.components.runtime.Web;
+                        import com.google.appinventor.components.runtime.WebViewer;
+                        import com.google.appinventor.components.runtime.util.Ev3Constants;
+                        import org.json.JSONException;
+                        import org.json.JSONObject;
+                        import java.net.URL;
+                        import java.text.DecimalFormat;
+                        
+                        public class MainActivity extends Form implements HandlesEventDispatching {
+                        
+                            private
+                            VerticalScrollArrangement mainArrangement;
+                            TextBox weightBox, heightBox;
+                            Button calcButton, stepScr;
+                            Label resultAtBottom, headingAtTop, info;
+                            HorizontalArrangement dataEntryArrangement;
+                        
+                            protected void $define() {
+                        
+                                this.Sizing("Responsive");
+                                this.BackgroundColor(COLOR_BLACK);
+                                mainArrangement = new VerticalScrollArrangement(this);
+                                mainArrangement.WidthPercent(100);
+                                mainArrangement.Height(LENGTH_FILL_PARENT);
+                                mainArrangement.AlignHorizontal(Component.ALIGNMENT_CENTER);
+                        
+                                headingAtTop = new Label(mainArrangement);
+                                headingAtTop.Text("BMI calculator");
+                                headingAtTop.WidthPercent(100);
+                                headingAtTop.TextAlignment(ALIGNMENT_CENTER);
+                                headingAtTop.HeightPercent(10);
+                                headingAtTop.FontSize(25);
+                                headingAtTop.BackgroundColor(COLOR_GRAY);
+                                headingAtTop.TextColor(COLOR_BLACK);
+                        
+                                dataEntryArrangement = new HorizontalArrangement(mainArrangement);
+                                dataEntryArrangement.WidthPercent(LENGTH_FILL_PARENT);
+                                dataEntryArrangement.HeightPercent(15);
+                        
+                                weightBox = new TextBox(dataEntryArrangement);
+                                weightBox.WidthPercent(50);
+                                weightBox.HeightPercent(20);
+                                weightBox.FontSize(30);
+                                weightBox.TextAlignment(ALIGNMENT_CENTER);
+                                weightBox.Hint("Weight-Kg");
+                                weightBox.TextColor(COLOR_WHITE);
+                        
+                                heightBox = new TextBox(dataEntryArrangement);
+                                heightBox.WidthPercent(50);
+                                heightBox.HeightPercent(20);
+                                heightBox.TextAlignment(ALIGNMENT_CENTER);
+                                heightBox.FontSize(30);
+                                heightBox.Hint("Height-M");
+                                heightBox.TextColor(COLOR_WHITE);
+                        
+                                calcButton = new Button(mainArrangement);
+                                calcButton.Text("Calculate");
+                                calcButton.HeightPercent(10);
+                                calcButton.Width(LENGTH_FILL_PARENT);
+                                calcButton.BackgroundColor(COLOR_GRAY);
+                                calcButton.TextColor(COLOR_BLACK);
+                        
+                                info = new Label(mainArrangement);
+                                info.HeightPercent(5);
+                                info.FontSize(20);
+                                info.Width(LENGTH_FILL_PARENT);
+                                info.TextAlignment(ALIGNMENT_CENTER);
+                        
+                                resultAtBottom = new Label(mainArrangement);
+                                resultAtBottom.HeightPercent(10);
+                                resultAtBottom.FontSize(50);
+                                resultAtBottom.Width(LENGTH_FILL_PARENT);
+                                resultAtBottom.TextAlignment(ALIGNMENT_CENTER);
+                                resultAtBottom.BackgroundColor(COLOR_GRAY);
+                                resultAtBottom.TextColor(COLOR_BLACK);
+                        
+                                Label space1 = new Label(mainArrangement);
+                                space1.HeightPercent(2);
+                        
+                                stepScr = new Button (mainArrangement);
+                                stepScr.Text("=> Step Counter =>");
+                                stepScr.HeightPercent(10);
+                                stepScr.WidthPercent(100);
+                                stepScr.BackgroundColor(COLOR_GRAY);
+                                stepScr.TextColor(COLOR_BLACK);
+                                stepScr.TextAlignment(ALIGNMENT_CENTER);
+                        
+                                EventDispatcher.registerEventForDelegation(this, formName, "Click");
+                        
+                            }
+                        
+                            public boolean dispatchEvent(Component component, String componentName, String eventName, Object[] params) {
+                        
+                                if (eventName.equals("Click")) {
+                                    if (component.equals(calcButton)) {
+                                        Integer persons_bmi = calculateTheBmi();
+                                        System.err.print("A");
+                                        System.err.print(persons_bmi);
+                                        final Integer underweight = 18;
+                                        final Integer normal = 24;
+                                        final Integer overweight = 30;
+                                        final Integer obese = 31;
+                        
+                                        if (persons_bmi &lt; underweight) {
+                                            info.Text("Underweight");
+                                            info.TextColor(COLOR_YELLOW);
+                                            info.TextAlignment(ALIGNMENT_CENTER);
+                                            System.err.print("B");
+                        
+                                        } else if (persons_bmi &lt; normal) {
+                                            info.Text("Normal");
+                                            info.TextColor(COLOR_GREEN);
+                                            info.TextAlignment(ALIGNMENT_CENTER);
+                                            System.err.print("C");
+                        
+                                        } else if (persons_bmi &lt; overweight) {
+                                            info.Text("Overweight");
+                                            info.TextColor(COLOR_ORANGE);
+                                            info.TextAlignment(ALIGNMENT_CENTER);
+                                            System.err.print("D");
+                                        }
+                                        else
+                                        {
+                                            info.Text("Obese");
+                                            info.TextColor(COLOR_RED);
+                                            info.TextAlignment(ALIGNMENT_CENTER);
+                                            // obese
+                                        }
+                                        return true;
+                                    }
+                                    else if (component.equals(stepScr)) {
+                                        dbg("A");
+                                        switchForm("CounterS");
+                                        dbg("B");
+                                        return true;
+                                    }
+                                }
+                                return false;
+                            }
+                        
+                            Integer calculateTheBmi() {
+                                Integer answer = null;
+                                try {
+                                    answer = 0;
+                                    Double weight = 0.0, height = 0.0, bmi_result = 0.0;
+                                    if (!weightBox.Text().equals("")) {
+                                        weight = Double.valueOf(weightBox.Text());
+                                    }
+                                    if (!heightBox.Text().equals("")) {
+                                        height = Double.valueOf(heightBox.Text());
+                                    }
+                                    bmi_result = 0.0;
+                                    if ((height != Double.valueOf(0)) && (weight != Double.valueOf(0))) {
+                                        bmi_result = weight / (height * height);
+                                        DecimalFormat df = new DecimalFormat();
+                                        df.setMaximumFractionDigits(0); //this is round up !
+                                        resultAtBottom.Text(df.format(bmi_result));
+                                        answer = Integer.valueOf(df.format(bmi_result));
+                                    } else {
+                                        resultAtBottom.Text("0");
+                                        answer = 0;
+                                    }
+                        
+                                } catch (Exception e) {
+                                    resultAtBottom.FontSize(20);
+                                    resultAtBottom.Text(e.toString());
+                                    resultAtBottom.Text("Please enter number");
+                        
+                                }
+                                return answer;
+                            }
+                            public static void dbg (String debugMsg) {
+                                System.err.println( "~~~> " + debugMsg + " &lt;~~~\n");
+                            }
+                        }
+                    </code>
+                </pre>
+        </div>
+    </div> <hr>
+
+    <h2>CounterS.java</h2>
+    <div class="container">
+        <div class="image"></div>
+        <div class="text">
+            <h4>Pedometer</h4>
+            <pre>
+                    <code>
+                        package com.example.newbmi;
+
+import com.google.appinventor.components.runtime.Button;
+import com.google.appinventor.components.runtime.Component;
+import com.google.appinventor.components.runtime.EventDispatcher;
+import com.google.appinventor.components.runtime.Form;
+import com.google.appinventor.components.runtime.HandlesEventDispatching;
+import com.google.appinventor.components.runtime.HorizontalArrangement;
+import com.google.appinventor.components.runtime.Label;
+import com.google.appinventor.components.runtime.Pedometer;
+import com.google.appinventor.components.runtime.TextBox;
+
+import com.google.appinventor.components.runtime.VerticalScrollArrangement;
+
+public class CounterS extends Form implements HandlesEventDispatching {
+    
+    private
+    Pedometer wStep;
+    TextBox WalkSteps, DistanceW;
+    Integer Steps=0;
+    Double Distance=0.0;
+    Button start, stop, reset, bmiScr;
+    /*Integer Color=COLOR_GRAY, TextColor=COLOR_BLACK;*/
+    Label headingAtTop;
+    
+    protected void $define()
+    {
+        this.Sizing("Responsive");
+        this.BackgroundColor(COLOR_BLACK);
+        VerticalScrollArrangement counterMain = new VerticalScrollArrangement(this);
+        counterMain.Width(LENGTH_FILL_PARENT);
+        counterMain.Height(LENGTH_FILL_PARENT);
+        counterMain.BackgroundColor(Component.COLOR_BLACK);
+
+        headingAtTop = new Label(counterMain);
+        headingAtTop.Text("Step Counter");
+        headingAtTop.WidthPercent(100);
+        headingAtTop.TextAlignment(ALIGNMENT_CENTER);
+        headingAtTop.HeightPercent(10);
+        headingAtTop.FontSize(25);
+        headingAtTop.BackgroundColor(COLOR_GRAY);
+        headingAtTop.TextColor(COLOR_BLACK);
+
+        Label space2 = new Label(counterMain);
+        space2.HeightPercent(2);
+
+        WalkSteps = new TextBox(counterMain);
+        WalkSteps.WidthPercent(100);
+        WalkSteps.HeightPercent(11);
+        WalkSteps.BackgroundColor(Component.COLOR_WHITE);
+        WalkSteps.FontSize(60);
+        WalkSteps.TextColor(Component.COLOR_BLACK);
+        WalkSteps.Text(Steps.toString());
+        WalkSteps.TextAlignment(ALIGNMENT_CENTER);
+
+        Label space1 = new Label(counterMain);
+        space1.HeightPercent(2);
+
+        DistanceW = new TextBox(counterMain);
+        DistanceW.WidthPercent(100);
+        DistanceW.HeightPercent(11);
+        DistanceW.BackgroundColor(COLOR_WHITE);
+        DistanceW.FontSize(60);
+        DistanceW.TextColor(COLOR_BLACK);
+        DistanceW.Text(Steps.toString());
+        DistanceW.TextAlignment(ALIGNMENT_CENTER);
+
+        Label space3 = new Label(counterMain);
+        space3.HeightPercent(2);
+
+        HorizontalArrangement ButtonHolder = new HorizontalArrangement(counterMain);
+        ButtonHolder.HeightPercent(10);
+
+        start = new Button(ButtonHolder);
+        start.HeightPercent(8);
+        start.WidthPercent(35);
+        start.Text("start");
+        start.TextColor(Component.COLOR_BLACK);
+        start.BackgroundColor(Component.COLOR_GREEN);
+
+        stop = new Button(ButtonHolder);
+        stop.HeightPercent(8);
+        stop.WidthPercent(35);
+        stop.Text("stop");
+        start.TextColor(Component.COLOR_BLACK);
+        stop.BackgroundColor(Component.COLOR_RED);
+
+        reset = new Button(ButtonHolder);
+        reset.HeightPercent(8);
+        reset.WidthPercent(35);
+        reset.Text("reset");
+        start.TextColor(Component.COLOR_BLACK);
+        reset.BackgroundColor(Component.COLOR_ORANGE);
+
+        bmiScr = new Button (counterMain);
+        bmiScr.Text("&lt;= BMI Calculator &lt;=");
+        bmiScr.HeightPercent(10);
+        bmiScr.WidthPercent(100);
+        bmiScr.BackgroundColor(COLOR_GRAY);
+        bmiScr.TextColor(COLOR_BLACK);
+        bmiScr.TextAlignment(ALIGNMENT_CENTER);
+
+        wStep = new Pedometer(counterMain);
+        EventDispatcher.registerEventForDelegation(this, formName, "Click");
+        EventDispatcher.registerEventForDelegation(this, formName, "WalkStep");
+    }
+    @Override
+    public boolean dispatchEvent(Component component, String componentName, String eventName, Object[] params)
+    {
+        dbg("dispatchEvent: " + formName + " [" + component.toString() + "] [" + componentName + "] " + eventName);
+        switch (eventName)
+        {
+            case "Click":
+                if (component.equals(start))
+                {
+                    wStep.Start();
+                    return true;
+                } else if (component.equals(stop))
+                {
+                    wStep.Stop();
+                    return true;
+                } else if (component.equals(reset))
+                {
+                    wStep.Reset();
+                    Steps = 0;
+                    Distance = 0.0;
+                    WalkSteps.Text(Steps.toString());
+                    DistanceW.Text(String.format("%.2f", Distance) + " M");
+                    return true;
+                }
+                else if (component.equals(bmiScr)) {
+                    dbg("A");
+                    switchForm("MainActivity");
+                    dbg("B");
+                    return true;
+                }
+                break;
+            case "WalkStep":
+            {
+               /* WalkSteps.Text(Integer.toString(wStep.WalkSteps()));*/
+                dbg("B");
+                dbg("WalkStep event received...");
+                Steps = wStep.WalkSteps();
+                WalkSteps.Text(Steps.toString());
+                Distance = Steps * 0.762;
+                DistanceW.Text(String.format("%.2f", Distance) + " M");
+            }
+        }
+        return false;
+    }
+    public static void dbg (String debugMsg) {
+        System.err.println( "~~~> " + debugMsg + " &lt;~~~\n");
+    }
+}
+                    </code>
+                </pre>
+        </div>
+    </div>
+    <hr>
+
+    <h2>Evidence of testing</h2>
+    <div class="container">
+        <div class="image">
+            <img src="images/underweight.png" alt="underweight">
+            <img src="images/underweight2.png" alt="underweight2">
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <div class="image">
+            <img src="images/normal.png" alt="normal">
+            <img src="images/normal2.png" alt="normal2">
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <div class="image">
+            <img src="images/owerweight.png" alt="overweight">
+            <img src="images/overweight2.png" alt="overweight2">
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <div class="image">
+            <img src="images/obese.png" alt="obese">
+            <img src="images/obese2.png" alt="obese2">
+        </div>
+    </div>
+    <br>
+  <!--  <div class="vid">     
+          <video src="images/XRecorder_09052024_215414.mp4" type="video/mp4"></video>
+            loop="true" autoplay="autoplay"
+    </div>-->
+    <video  width="350" controls>
+        <source src="XRecorder_09052024_215414.mp4" type="video/mp4">
+    </video>
+    <div class="container">
+        <div class="text">
+            <h2>
+                For the testing Pedometer I use step converter: <a href="https://www.convertunits.com/from/step/to/meters"> Step converter</a>
+            </h2>
+        </div>
+    </div>
+<hr>
+    <h2 class="center">Project report</h2>
+    <h4 class="texting">
+        Objective:<br>
+        To develop a user user-friendly mobile application that assists user in monitoring their health by calculating Body Mass Index (BMI) and, <br>
+        tracking their daily steps and distance.
+    </h4>
+    <h4 class="texting"> 
+        Features: <br>
+        Splash Screen - A welcoming screen that appears upon app launch. the app text. <br>           
+        BMI Calculator - Allows users to input their weight and height to calculate their Body Mass Index (BMI),<br>
+        providing their health status Underweight, Normal weight, Overweight and Obese. <br>
+        Pedometer - A step counter that tracks the number of steps and distancetaken throughout the day, encouraging users to stay active.
+        </h4>
+        <h4 class="texting"> 
+            Development Tools: <br>
+            Programming Language - Java for Android. <br>
+            Framework - Android Studio. <br>
+            Libraries - AppInventor, Kawa. 
+        </h4>           
+        <h4 class="texting">
+            Conclusion: <br>         
+            This app aims to promote a healthier lifestyle by providing essential tools for health monitoring. The splash screen creates a <br>
+            positive first impression, while the BMI calculator and pedometer offer practical functionality for everyday use. </h4> <br>
+
+            <h2 class="center"> <a href="newbmi (copy).zip"> Zip file for download</a></h2>
+    
+    <div class="hah">
+        <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Ft.fachtnaroe.net%2Fred%2F3%2FMOBT2-RED3%2Findex.html" rel="nofollow"
+            target="_blank">Validate</a>
+    </div>
+
+</body>
+
+</html>

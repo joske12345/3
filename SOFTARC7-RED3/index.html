@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Waterfall.Red3</title>
+  <style>
+    body {
+      background-color: grey;
+    }
+
+    .navbar {
+  background-color: lightseagreen;
+  overflow: hidden;
+}
+.navbar a {
+  float: left;
+  display: block;
+  color: red;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 18px;
+}
+.navbar .icon {
+  display: none;
+}
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: red;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+  background-color: black;
+  color: white;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px red;
+  z-index: 1;
+}
+.dropdown-content a {
+  float: none;
+  color: red;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+.dropdown-content a:hover {
+  background-color: black;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+@media screen and (max-width: 800px) {
+  .navbar a:not(:first-child),
+  .dropdown .dropbtn {
+    display: none;
+  }
+  .navbar a.icon {
+    float: right;
+    display: block;
+  }
+  .navbar a:hover,
+  .dropdown:hover .dropbtn {
+    background-color: white;
+    color: black;
+  }
+  .dropdown-content a:hover {
+    background-color: goldenrod;
+  }
+}
+@media screen and (max-width: 800px) {
+  .navbar.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .navbar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .navbar.responsive .dropdown {
+    float: none;
+  }
+  .navbar.responsive .dropdown-content {
+    position: relative;
+  }
+  .navbar.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+    .na {
+      color: red;
+      text-align: center;
+      font-size: 30px;
+      border: none;
+    }
+
+    hr {
+      width: 55%;
+      box-shadow: 0 0 3px red;
+      animation: glowMinr 2s ease-in-out;
+      -webkit-animation: glow 1.5s ease-in-out infinite;
+    }
+
+    @keyframes glow {
+      0% {
+        box-shadow: 0 0 2px red;
+      }
+
+      50% {
+        box-shadow: 0 0 8px red;
+      }
+
+      100% {
+        box-shadow: 0 0 2px red;
+      }
+    }
+
+    .im img {
+      mix-blend-mode: multiply;
+      width: 350px;
+      max-width: 100%;
+      /*object-position: center;*/
+      /*justify-content: center;*/
+      text-align: center;
+    }
+    h2 {
+      text-align: center;
+    }
+    /*.pagination {
+      display: block;
+      clear: both;
+      position: relative;
+      text-align: center;
+    }
+    .pagination a {
+      float: left;
+      padding: 8px 16px;
+      border: 1px solid #ddd;
+    }
+    .pagination a:hover {
+      background-color: lightseagreen;
+    }*/
+    .pagination {
+      clear: both;
+      position: relative;
+      text-align: center;
+    }
+    .pagination a {
+      display:inline-block;
+      margin: 2px 2px 2px 0;
+      padding: 8px 16px;
+      color: #ddd;
+      background-color: lightseagreen;
+    }
+    .hah {
+  background-color: lightseagreen;
+  overflow: hidden;
+  text-align: center;
+  font-size: 18px;
+  display: block;
+  padding: 0;
+  border: none;
+}
+  </style>
+</head>
+
+<body>
+
+  <div class="navbar" id="myNavbar">
+    <a href="../index.html">Home</a>
+    <div class="dropdown">
+       <button class="dropbtn">Web-Project
+       </button>
+        <div class="dropdown-content">
+            <a href="../bmi.html">BMI</a>
+            <a href="../history.html">History</a>
+            <a href="../reference.html">Reference</a>
+            <a href="https://t.fachtnaroe.net">About</a>
+        </div>
+    </div>
+        <div class="dropdown">
+            <button class="dropbtn">Sofware Architecture
+            </button>
+            <div class="dropdown-content">
+              <a href="../SOFTARC1-RED3/index.html">Moder methodlogy</a>
+              <a href="../SOFTARC2-RED3/index.html">Pair Programming</a>
+              <a href="../SOFTARC3-RED3/index.html">Apply Akills</a>
+              <a href="../SOFTARC4-RED3/index.html">UML</a>
+              <a href="../SOFTARC5-RED3/index.html">Use-case diagram</a>
+              <a href="../SOFTARC6-RED3/index.html">Use-case review</a>
+              <a href="../SOFTARC7-RED3/index.html">Waterfall</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Work EXP
+            </button>
+            <div class="dropdown-content">
+                <a href="../WXP-DIARY-RED3/index.html">Diary</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Mobile Tech
+            </button>
+            <div class="dropdown-content">
+              <a href="../MOBT1-RED3/index.html">Prototype app</a>
+              <a href="../MOBT2-RED3/index.html">Android Native Application</a>  
+              <a href="../MOBT3-RED3/index.html">Mast.skill-3</a>
+            </div>
+        </div>
+        <a class="icon" href="javascript:void(0);"  onclick="myFunction()">&#9776;</a>
+</div>
+
+  <h1 class="na">Waterfall</h1>
+  <hr>
+  <h2>Identify a clear statement of objective for each stage.</h2>
+  <div class="im">
+    <img src="images/waterfall.jpg" alt="waterfall">
+  </div>
+ 
+  <h3>Requirements:</h3>
+  <p>
+    In this phase, all customer requirements are gathered and documented. <br>
+    It is assumed that all requirements can be gathered at this stage, <br>
+    and there will be no further customer correspondence until the product is complete.
+  </p>
+  <h3>Design:</h3>
+  <p>
+    The design phase is broken up into two sub-phases: logical design and physical design. <br>
+    In the logical design sub-phase, possible solutions are brainstormed and theorized. <br>
+    In the physical design sub-phase, those theoretical ideas are made into concrete specifications.
+  </p>
+  <h3>Implementation:</h3>
+  <p>
+    In this phase, programmers assimilate the requirements and specifications from the previous phases <br>
+    and produce actual code.
+  </p>
+  <h3>Verification:</h3>
+  <p>
+    This phase involves the customer reviewing the product to ensure that it meets the requirements <br>
+    laid out at the beginning of the project. This is done by releasing the completed product to the customer.
+  </p>
+  <h3>Maintenance:</h3>
+  <p>
+    During the maintenance phase, the customer uses the product regularly and discovers bugs, inadequate features, <br>
+    and other errors that occurred during production. The production team applies these fixes as necessary until the
+    customer is satisfied.
+  </p>
+  <hr>
+
+  <h2>Define testable, objective, success and failure criteria for each stage.</h2>
+  <h3>Requirements:</h3>
+  <ol>
+    <li>The requirements documentation should be complete, it should clearly outline what the system is expected to do. </li>
+    <li>Gather all necessary information from stakeholders and document it accurately. </li>
+    <li>All stakeholders agree upon the documented requirements, and there are no major discrepancies. </li>
+    <li>Incomplete requirements, conflicting requirements from stakeholders, or a lack of consensus on the documented requirements. </li>
+  </ol>
+  <h3>Design:</h3>
+  <ol>
+    <li>The system design documents should provide a clear architecture, interface definitions. </li>
+    <li>To translate the requirements into a blueprint for the system's structure. </li>
+    <li>The design meets all specified requirements, technical constraints, and maintenance. </li>
+    <li>Inadequate design documentation, design not aligned with requirements, or technical feasibility issues. </li>
+  </ol>
+  <h3>Implementation:</h3>
+  <ol>
+  <li>The implemented code should adhere to coding standards, be well-documented, and pass unit tests. </li>
+  <li>All components are implemented correctly, meet performance requirements. </li>
+  <li>Code does not meet design specifications, fails unit tests, or introduces new defects into the system. </li>
+</ol>
+<h3>Verification:</h3>
+<ol>
+  <li>The objective of verification is to confirm that the product of each development stage meets the specified criteria and standards. </li>
+  <li>discrepancies, errors from outcomes and requirements. </li>
+  <li>Verification is successful when all verification activities have been completed according requirements. </li> 
+  <li>Critical defects found during testing that prevent the software from meeting its requirements.</li>
+  <li>Failure to adhere to established verification standards.</li>
+</ol>
+<h3>Maintenance:</h3>
+<ol>
+  <li>The objective of the Maintenance stage is to address issues.</li>
+  <li>It aims to ensure the ongoing reliability, availability, and performance of the software.</li>
+  <li>Maintenance tasks are completed within the specified timeframes and budget.</li>
+  <li>User satisfaction levels remain high or improve as a result of maintenance activities.</li>
+  <li>Maintenance tasks are delayed or not completed due to  technical challenges, or other factors.</li>
+  <li>Defects resolution or regression issues.</li>
+  <li>User feedback or performance metrics indicate a decline in satisfaction or system performance following maintenance activities.</li>
+</ol>
+<hr>
+
+<h2>Break down stages as needed into smaller stages/objectives and document those.</h2>
+<h3>Requirements:</h3>
+<ol>
+  <li> Identify all stakeholders involved in the project,including end-users, clients.</li>
+  <li> Analyze gathered requirements to identify priorities. Prioritize requirements on importance to stakeholders.</li>
+</ol>
+<h3>Design:</h3>
+<ol>
+  <li> Break down the high-level design into detailed specifications for each component data structures and algorithms.</li>
+  <li>Build prototypes to validate design concepts and gather feedback from stakeholders.</li>
+  <li> walkthroughs of the design documentation to identify potential issues or improvements before improvements.</li>
+</ol>
+<h3>Implementation:</h3>
+<ol>
+  <li> Allocate necessary resources such as  tools, and libraries required for coding.</li>
+  <li>Break down the implementation tasks into smaller stages, assigning them to development team members based on their experience.</li>
+  <li> Ensure that all code is written following the coding standards.</li>
+  <li> Track revisions, and facilitate collaboration among developers.</li>
+</ol>
+<h3>Verification:</h3>
+<ol>
+  <li>Verify that all planned verification activities have been completed.</li>
+  <li>Document the results of verification activities, including test cases, test results, and any identified defects or improvements</li>
+</ol>
+<h3>Maintenance:</h3>
+<ol>
+  <li> Monitor the deployed software for issues, defects, and performance problems.</li>
+  <li> Investigate reported issues.</li>
+  <li>Ensuring that changes are properly tested and deployed.</li>
+</ol>
+<hr>
+
+<div id="pag">
+  <div class="pagination">
+    <a href="index.html">&laquo;</a>
+      <a href="index2.html">&raquo;</a>
+  </div>
+</div>
+
+<div class="hah">
+  <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Ft.fachtnaroe.net%2Fred%2F3%2FSOFTARC7-RED3%2Findex.html" rel="nofollow"
+      target="_blank">Validate</a>
+      &nbsp; &nbsp; &amp; &nbsp; &nbsp;
+      <a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Ft.fachtnaroe.net%2Fred%2F3%2FSOFTARC7-RED3%2Findex.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en" rel="nofollow"
+          target="_blank">Css Validate</a>
+</div>
+
+
+
+  <script src="../assets/script/navbar.js"></script>
+
+</body>
+
+</html>

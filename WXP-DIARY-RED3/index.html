@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WXP-DIARY-RED3</title>
+    <style>
+        body {
+            background-color: gray;
+            margin: auto;
+        }
+
+        .navbar {
+            background-color: lightseagreen;
+            overflow: hidden;
+
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: red;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .navbar .icon {
+            display: none;
+        }
+
+        .dropdown {
+            float: left;
+            overflow: hidden;
+
+        }
+
+        .dropdown .dropbtn {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: red;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+
+        .navbar a:hover,
+        .dropdown:hover .dropbtn {
+            background-color: black;
+            color: white;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px red;
+            z-index: 1;
+
+        }
+
+        .dropdown-content a {
+            float: none;
+            color: red;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: black;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        @media screen and (max-width: 800px) {
+            .navbar.responsive .icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+
+            .navbar.responsive a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+
+            .navbar.responsive .dropdown {
+                float: none;
+            }
+
+            .navbar.responsive .dropdown-content {
+                position: relative;
+            }
+
+            .navbar.responsive .dropdown .dropbtn {
+                display: block;
+                width: 100%;
+                text-align: left;
+            }
+        }
+        h2 {
+            padding-left: 100px;
+            color: red;
+        }
+
+        hr {
+            width: 65%;
+            box-shadow: 0 0 3px red;
+            animation: glowMinr 2s ease-in-out;
+            -webkit-animation: glow 1.5s ease-in-out infinite;
+        }
+
+        @keyframes glow {
+            0% {
+                box-shadow: 0 0 2px red;
+            }
+
+            50% {
+                box-shadow: 0 0 8px red;
+            }
+
+            100% {
+                box-shadow: 0 0 2px red;
+            }
+        }
+
+        h1 {
+            color: whitesmoke;
+            font-size: 28px;
+            padding: 25px;
+        }
+
+        img,
+        form {
+            width: 500px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        p {
+            padding-left: 20px;
+        }
+
+        .hah {
+            background-color: lightseagreen;
+            overflow: hidden;
+            text-align: center;
+            font-size: 18px;
+            display: block;
+            padding: 0;
+            border: none;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            padding-left: 5%;
+        }
+
+        .image img {
+            max-width: 100%;
+            max-height: 100%;
+            width: 450px;
+        }
+        .text {
+      font-size: 17px;
+      padding-left: 20px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="navbar" id="myNavbar">
+        <a href="../index.html">Home</a>
+        <div class="dropdown">
+            <button class="dropbtn">Web-Project</button>
+            <div class="dropdown-content">
+                <a href="../1bmi.html">BMI</a>
+                <a href="../history.html">History</a>
+                <a href="../reference.html">Reference</a>
+                <a href="https://t.fachtnaroe.net">About</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">Sofware Architecture</button>
+            <div class="dropdown-content">
+                <a href="../SOFTARC1-RED3/index.html">Moder methodlogy</a>
+                <a href="../SOFTARC2-RED3/index.html">Pair Programming</a>
+                <a href="../SOFTARC3-RED3/index.html">Apply Akills</a>
+                <a href="../SOFTARC4-RED3/index.html">UML</a>
+                <a href="../SOFTARC5-RED3/index.html">Use-case diagram</a>
+                <a href="../SOFTARC6-RED3/index.html">Use-case review</a>
+                <a href="../SOFTARC7-RED3/index.html">Waterfall</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">Mobile Tech</button>
+            <div class="dropdown-content">
+                <a href="../MOBT1-RED3/index.html">Prototype app</a>
+                <a href="../MOBT2-RED3/index.html">Android Native Application</a>  
+                <a href="../MOBT3-RED3/index.html">Mast.skill-3</a>
+            </div>
+        </div>
+        <a class="icon" href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
+    </div>
+
+    <h1>Work Experience: <br> Starting day 22/01/2024, <br> End day: 2/2/2024</h1>
+    <h2>RED3</h2>
+
+    <div class="container">
+        <div class="text">
+            <h3>22-01-2024 </h3>
+            <h4>10 AM, we start a meeting for work experience. It was explaining about brief,<br>
+                and when we move in our groups (Barber 3). We introduce each other also we <br>
+                meet group tutor. After introducing it we got a smaller group. What we do for <br>
+                a brief. 12 cloak we have another meeting and he talked <br>
+                about waterfall, agile, project management. <br>
+                After lunch we discus and looked into templates and other barbers web sites <br>
+                just to get more ideas for how our web page looks (Razor Sharp). At 16:00 we end the day.</h4>
+        </div>
+    </div>
+
+<hr>
+
+<div class="container">
+    <div class="image">
+        <img src="images/ibm.course.png" alt="fundamentals">
+    </div>
+    <div class="text">
+        <h3>23-01-2024</h3>
+        <h4>
+        In the morning at 10 AM, we talk about what everyone has done, <br>
+        or what we have done. When we move in our small groups and start <br>
+        doing the work until lunch. After lunch we start a Project management <br>
+        fundamentals course, and we do it for the rest of the evening. At 16:00 we end the day.
+        </h4>
+    </div>
+</div>
+
+<hr>
+
+<div class="container">
+    <div class="image">
+        <img src="images/ibmcert.png" alt="cert">
+    </div>
+    <div class="text">
+        <h3>24-01-2024</h3>
+        <h4>10AM in main meeting we have meeting for marketing. After the meeting <br>
+            we move into our group and talk with the tutor. Those who did not <br>
+            finish the Project management fundamentals course do that for the <br>
+            rest of the evening and others who have done start doing our parts for a brief. At 16:00 we end the day.</h4>
+    </div>
+</div>
+
+<hr>
+
+<div class="container">
+    <div class="image">
+        <img src="images/generative.ai.course.png" alt="generative AI">
+    </div>
+    <div class="text">
+        <h3>25-01-2024</h3>
+        <h4>In the morning 10AM meeting with the tutor, we show what we have done yesterday, and he <br>
+            tells us what we change for our work what we have done. I get stuck with a sticky <br>
+            navigation (navigation follow web page when you are scrolling down the page, like a sticky navbar.) search<br>
+            more about that in google how to do. After lunch we met with the tutor, and he sent <br>
+            a web link to another course (Generative AI) and that was for the rest of the evening. At 16:00 we end the
+            day.</h4>
+    </div>
+</div>
+
+<hr>
+
+<div class="container">
+    <div class="image">
+        <img src="images/generative.ai.cerf.png" alt="AI cert">
+    </div>
+    <div class="text">
+        <h3>26-01-2024</h3>
+        <h4>10AM It was the same morning we met in a group and discus more about our project. After discus with <br>
+            the tutor, we move into our smaller groups where we work. After lunch in the main meeting room, <br>
+            the lady talked about cybersecurity for an hour. We move back into our group and do Generative <br>
+            AI course for the rest of the evening and some people stay working on a project. At 16:00 we end the day.</h4>
+    </div>
+</div>
+
+<hr>
+
+<div class="container">
+    <div class="image">
+        <img src="images/uor.web.page.png" alt="web page">
+    </div>
+    <div class="text">
+        <h3>29-01-2024</h3>
+        <h4>10 AM, we have meeting into our group like every morning. We discus with the tutor about presentation how<br>
+            it looks and how many slides will be. After we stay in our Barber group and do the slides but not everyone. <br>
+            We just send everything to one person who works with slides, and I stay working with web page. I want <br>
+            to make images at 50% width, but I made a mistake somewhere in CSS, so it did not work for me to try to <br>
+            find the mistake, but it took too long, and I decided to change the main web page. After lunch we meet <br>
+            with the tutor, and everyone shows how everything looks. The tutor was happy with everyone's work, <br>
+            also he was happy with a web page. At 16:00 we end the day.</h4>
+    </div>
+</div>
+
+<hr>
+
+<div class="container">
+    <div class="image">
+        <img src="images/validate.png" alt="validate">
+    </div>
+    <div class="text">
+        <h3>30-01-2024</h3>
+        <h4>10AM morning meeting the tutor looks in our presentation and tells us what we can change and more <br>
+            like Grant for a business. I stay working with a web page and try to fix other fellas code to be <br>
+            responsive on the phone. Later, we got a message from the tutor, so he did not joy us after <br>
+            He tells us to work on what we do and if someone is not finished Generative AI does that course. <br>
+            After lunch I validate web page and fix all errors, warnings, and work with a responsive for that one <br>
+            page the code was mess it was hard to find where he did a mistake. Well, it was not a big problem just <br>
+            on the phone is not showing navigation bar. I did that for the rest of the evening. At 16:00 we end the day</h4>
+    </div>
+</div> 
+
+<hr>
+
+<div class="container">
+    <div class="text">
+        <h3>31-01-2024</h3>
+        <h4>10AM, we practiced a presentation speech. I was lucky and I did not participate in the speech. <br>
+            In that time, I add one container For an opening hour and tutor tells me if I can add one more page <br>
+            for shopping, not much time left to make nice looking page, so I did the simple page. After lunch we <br>
+            have another practice for presentation, and he tells us to make a few slight changes in slides for <br>
+            the rest of the evening. At 16:00 we end the day.</h4>
+    </div>
+</div>
+
+<hr>
+
+<div class="container">
+<div class="text">
+    <h3>01-02-2024</h3>
+    <h4>Today is the day when we have presentation. We got a message from tutor he said join in meeting 11 cloak <br>
+        so we can relax a little longer because we did excellent job. When everyone joins the meeting, <br>
+        we talk with the tutor in a funny way. We do anything until lunch just fun talk with everyone and tutor <br>
+        as well. Before the lunch who speak in presentation take a quick practiced speech. After lunch everyone <br>
+        meets in the main meeting where was other 3 barbers' teams. We listened to all 3 teams' presentation <br>
+        and then we got ranked more like who wins between barbers. We were surprised our team took 1st place <br>
+        it was so nice. After the results everyone moved into our group to meet tutors. We told good news to <br>
+        the tutor we took 1st place between barbers he was so happy about it. Also, we talked about what we <br>
+        experienced in the presentation and how it went. After talking the tutor said we can leave for a day <br>
+        and not do anything because we have another presentation the next day in front of all the people who <br>
+        participated in this work experience. At 16:00 we end the day.</h4>
+</div>
+</div>
+
+<hr>
+
+<div class="container">
+    <div class="text">
+        <h3>02-02-2024</h3>
+        <h4>10AM in the main meeting room winners present their work in front of other people who participated <br>
+            in this work experience. It was 3 other teams. Barber, Bakery, coffee shop, and book shop, After all <br>
+            team representatives. Worker from fit talks about computer scientist, technology all study's if we <br>
+            are going in fit. Later we move our room and wait our tutor in that time come Magdalena to <br>
+            say goodbye and thanking for a hard work in the last 2 weeks. We wait for our tutor <br>
+            and talk with him also he sends email to Magdalena thanking for her hard work to organize this <br>
+            lifetime work experience also we thanked for our tutor for guiding and advising us for the last <br>
+            2 weeks. In this work experience I learned how important teamwork is. Where I can improve more <br>
+            also im coding not long it's not a year but still i need improve more if I want to get better. At 16:00 we
+            end the day.</h4>
+    </div>
+</div>
+
+<hr>
+
+<div class="container">
+    <div class="text">
+        <h1>Summary</h1>
+        <h4>During a two-week work experience. The experience began with introductions and group assignments, <br>
+            and web design discussions (our part for a web page with web page team). We worked on a web page <br>
+            project, coding, and navigation challenges. We received feedback from the tutor and prepared for <br>
+            a final presentation. Our team got first place among the Barber teams, including teams from other <br>
+            fields. Experience teamwork and coding improvement. The participant expressed gratitude to the <br>
+            tutor and organizers for this valuable opportunity.</h4>
+    </div>
+</div>
+
+    <div class="hah">
+        <a
+            href="https://validator.w3.org/nu/?doc=https%3A%2F%2Ft.fachtnaroe.net%2Fred%2F3%2FWXP-DIARY-RED3%2Findex.html">Validator</a>
+        &nbsp; &nbsp; &amp; &nbsp; &nbsp;
+        <a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Ft.fachtnaroe.net%2Fred%2F3%2FWXP-DIARY-RED3%2Findex.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en"
+            rel="nofollow" target="_blank">Css Validate</a>
+    </div>
+    <script src="../assets/script/navbar.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern.methodlogy.Red3</title>
+    <style>
+        body{
+            background-color: grey;
+        }
+        .navbar {
+  background-color: lightseagreen;
+  overflow: hidden;
+}
+.navbar a {
+  float: left;
+  display: block;
+  color: red;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 18px;
+}
+.navbar .icon {
+  display: none;
+}
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: red;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+  background-color: black;
+  color: white;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px red;
+  z-index: 1;
+}
+.dropdown-content a {
+  float: none;
+  color: red;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+.dropdown-content a:hover {
+  background-color: black;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+@media screen and (max-width: 800px) {
+  .navbar a:not(:first-child),
+  .dropdown .dropbtn {
+    display: none;
+  }
+  .navbar a.icon {
+    float: right;
+    display: block;
+  }
+  .navbar a:hover,
+  .dropdown:hover .dropbtn {
+    background-color: white;
+    color: black;
+  }
+  .dropdown-content a:hover {
+    background-color: goldenrod;
+  }
+}
+@media screen and (max-width: 800px) {
+  .navbar.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .navbar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .navbar.responsive .dropdown {
+    float: none;
+  }
+  .navbar.responsive .dropdown-content {
+    position: relative;
+  }
+  .navbar.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+.container{
+    margin-top: 5px;
+    padding: 10px;
+    align-items: center;
+    display: flex;
+}
+.text{
+    padding-left: 15px;
+    
+}
+img {
+    max-width: 100%;
+    max-height: 100%;
+    width: 450px;
+}
+h2{
+    padding: 15px;
+}
+.hah {
+  background-color: lightseagreen;
+  overflow: hidden;
+  text-align: center;
+  font-size: 18px;
+  display: block;
+  padding: 0;
+  border: none;
+}
+hr {
+  width: 85%;
+  box-shadow: 0 0 3px red;
+  animation: glowMinr 2s ease-in-out;
+  -webkit-animation: glow 1.5s ease-in-out infinite;
+}
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 2px red;
+  }
+  50% {
+    box-shadow: 0 0 8px red;
+  }
+  100% {
+    box-shadow: 0 0 2px red;
+  }
+}
+    </style>
+</head>
+<body>
+        <!-- Navigation with dropdown menu --> 
+    <div class="navbar" id="myNavbar">
+        <a href="../index.html">Home</a>
+        <div class="dropdown">
+           <button class="dropbtn">Web-Project
+           </button>
+            <div class="dropdown-content">
+                <a href="../bmi.html">BMI</a>
+                <a href="../history.html">History</a>
+                <a href="../reference.html">Reference</a>
+                <a href="https://t.fachtnaroe.net">About</a>
+            </div>
+        </div>
+
+            <div class="dropdown">
+                <button class="dropbtn">Sofware Architecture
+                </button>
+                <div class="dropdown-content">
+                  <a href="../SOFTARC1-RED3/index.html">Moder methodlogy</a>
+                  <a href="../SOFTARC2-RED3/index.html">Pair Programming</a>
+                  <a href="../SOFTARC3-RED3/index.html">Appply skills</a>
+                  <a href="../SOFTARC4-RED3/index.html">UML</a>
+                  <a href="../SOFTARC5-RED3/index.html">Use-case diagram</a>
+                  <a href="../SOFTARC6-RED3/index.html">Use-case review</a>
+                  <a href="../SOFTARC7-RED3/index.html">Waterfall</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropbtn">Work EXP
+                </button>
+                <div class="dropdown-content">
+                    <a href="../WXP-DIARY-RED3/index.html">Diary</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropbtn">Mobile Tech
+                </button>
+                <div class="dropdown-content">
+                  <a href="../MOBT1-RED3/index.html">Prototype app</a>
+                  <a href="../MOBT2-RED3/index.html">Android Native Application</a>  
+                  <a href="../MOBT3-RED3/index.html">Mast.skill-3</a>             
+                </div>
+            </div>
+            <a class="icon" href="javascript:void(0);"  onclick="myFunction()">&#9776;</a>
+        </div>
+        <h2>What is Agile ?</h2>
+        <div class="container">
+            <div class="image">
+                <img src="images/agile.png" alt="agile">
+            </div>
+            <div class="text">
+                <p>The Agile methodology is a project management approach that involves breaking <br>
+                    the project into phases and emphasizes continuous collaboration and improvement. <br>
+                     Teams follow a cycle of planning, executing, and evaluating.</p>
+            </div>
+        </div>
+<hr>
+
+<h2>State the principles of Agile.</h2>
+<div class="container">
+    <div class="image">
+        <img src="images/principles.jpeg" alt="">
+    </div>
+    <div class="text">
+        <ol>
+            <li>highest priority is to satisfy the customer through the early and continuous delivery of valuable software.</li>
+            <li>Welcome changing requirements, even late in development. Agile processes harness change for the customer's <br>
+                competitive advantage.</li>
+                <li>Deliver working software frequently, from a couple of weeks to a couple of months, with a preference to <br>
+                 the shorter timescale.</li>
+                 <li>Business people and developers must work together daily throughout the project.</li>
+                 <li>Build projects around motivated individuals. Give them the environment and support they need, and trust them to get the job done.</li>
+                 <li>The most efficient and effective method of conveying information to and within a development team is face-to-face conversation.</li>
+                 <li>The sponsors, developers, and users should be able to maintain a constant pace indefinitely.</li>
+                 <li>Continuous attention to technical excellence and good design enhances agility.</li>
+                 <li>Simplicity the art of maximizing the amount of work not done is essential.</li>
+                 <li>The best architectures, requirements, and designs emerge from self-organizing teams.</li>
+                 <li>At regular intervals, the team reflects on how to become more effective, and adjusts its behavior accordingly.</li>
+                 <li>Working software is the primary measure of progress.</li>
+
+        </ol>
+    </div>
+</div>
+<hr>
+
+<h2>What are the advantages of Agile.</h2>
+<div class="container">
+    <div class="image">
+        <img src="images/advantages.png" alt="advantage">
+    </div>
+    <div class="text">
+        <ol>
+            <li>Customer satisfaction</li>
+            <li>Improved quality </li>
+            <li>Adaptability</li>
+            <li>Reduced risk</li>
+
+        </ol>
+    </div>
+</div>
+<hr>
+<h2>Name project where the methodology was used by you</h2>
+        <div class="container">
+            <div class="image">
+                <img src="images/fit.png" alt="fit">
+            </div>
+            <div class="text">
+                <p>Work Experience with fit.</p>
+            </div>
+        </div>
+        <hr>
+
+        <h2>Outline how the methodology was used by you in that project. </h2>
+        <div class="container">
+            <div class="image">
+                <img src="images/uor.web.page.png" alt="website">
+            </div>
+            <div class="text">
+                <p>In the project, we used the Agile methodology with sprints of two weeks. <br>
+                  We started with planning, and had daily discuss with a other teams. <br>
+                  Our goal was to deliver working software at the end of each sprint <br>
+                  get feedback and improve the software. Collaboration, communication <br>
+                  to reflect on our performance. Agile provided us with a flexible and adaptable <br>
+                  way to manage the project and respond to changing requirements. <br>
+                  For more information navigate in navigation menu find (Work exp &rarr; Diary) or open link <br> 
+                   <a href="../WXP-DIARY-RED3/index.html">Work experience &rarr; Diary.</a></p>
+            </div>
+        </div>
+        <hr>
+
+        <h2>What Type or size of organization might use Agile.</h2>
+        <div class="container">
+            <div class="image">
+                <img src="images/companys.png" alt="companys">
+            </div>
+            <div class="text">
+                <p>Today, businesses need to be able to adapt, at enterprise scale, <br>
+                    in order to stay competitive. Responding to <br>
+                    customers' evolving needs and delighting them in the process, <br>
+                    providing flexible solutions, supporting teams of <br>
+                    teams working on a front, shifting mindsets to place technology, <br>
+                    and inspiring agile ways of working outside of software and IT teams.</p>
+            </div>
+        </div>
+
+        <div class="hah">
+          <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Ft.fachtnaroe.net%2Fred%2F3%2FSOFTARC1-RED3%2Findex.html" rel="nofollow"
+              target="_blank">Validate</a>
+              &nbsp; &nbsp; &amp; &nbsp; &nbsp;
+              <a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Ft.fachtnaroe.net%2Fred%2F3%2FSOFTARC1-RED3%2Findex.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en" rel="nofollow"
+              target="_blank">Css Validate</a>
+        </div>
+        <script src="../assets/script/navbar.js"></script>
+
+</body>
+</html>

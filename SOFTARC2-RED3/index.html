@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Socrati.Method.Red3</title>
+  <style>
+    body {
+      background-color: grey;
+    }
+
+    .navbar {
+  background-color: lightseagreen;
+  overflow: hidden;
+}
+.navbar a {
+  float: left;
+  display: block;
+  color: red;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 18px;
+}
+.navbar .icon {
+  display: none;
+}
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: red;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+  background-color: black;
+  color: white;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px red;
+  z-index: 1;
+}
+.dropdown-content a {
+  float: none;
+  color: red;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+.dropdown-content a:hover {
+  background-color: black;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+@media screen and (max-width: 800px) {
+  .navbar a:not(:first-child),
+  .dropdown .dropbtn {
+    display: none;
+  }
+  .navbar a.icon {
+    float: right;
+    display: block;
+  }
+  .navbar a:hover,
+  .dropdown:hover .dropbtn {
+    background-color: white;
+    color: black;
+  }
+  .dropdown-content a:hover {
+    background-color: goldenrod;
+  }
+}
+@media screen and (max-width: 800px) {
+  .navbar.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .navbar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .navbar.responsive .dropdown {
+    float: none;
+  }
+  .navbar.responsive .dropdown-content {
+    position: relative;
+  }
+  .navbar.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+    h1 {
+      padding: 30px;
+      color: whitesmoke;
+    }
+
+    h3 {
+      text-align: center;
+    }
+
+    h2 {
+      color: red;
+      padding-left: 100px;
+    }
+
+    hr {
+      box-shadow: 0 0 3px red;
+      animation: glowMinr 2s ease-in-out;
+      -webkit-animation: glow 1.5s ease-in-out infinite;
+    }
+
+    @keyframes glow {
+      0% {
+        box-shadow: 0 0 2px red;
+      }
+
+      50% {
+        box-shadow: 0 0 8px red;
+      }
+
+      100% {
+        box-shadow: 0 0 2px red;
+      }
+    }
+
+    img {
+      width: 400px;
+      height: auto;
+      padding-left: 20px;
+    }
+
+    p {
+      padding-left: 20px;
+    }
+    .hah {
+  background-color: lightseagreen;
+  overflow: hidden;
+  text-align: center;
+  font-size: 18px;
+  display: block;
+  padding: 0;
+  border: none;
+}
+.container {
+            display: flex;
+            align-items: center;
+            padding-left: 5%;
+        }
+
+        .image img {
+            max-width: 100%;
+            max-height: 100%;
+            width: 400px;
+        }
+        .text {
+      font-size: 17px;
+      padding-left: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="navbar" id="myNavbar">
+    <a href="../index.html">Home</a>
+    <div class="dropdown">
+       <button class="dropbtn">Web-Project
+       </button>
+        <div class="dropdown-content">
+            <a href="../bmi.html">BMI</a>
+            <a href="../history.html">History</a>
+            <a href="../reference.html">Reference</a>
+            <a href="https://t.fachtnaroe.net">About</a>
+        </div>
+    </div>
+        <div class="dropdown">
+            <button class="dropbtn">Sofware Architecture
+            </button>
+            <div class="dropdown-content">
+              <a href="../SOFTARC1-RED3/index.html">Moder methodlogy</a>
+              <a href="../SOFTARC2-RED3/index.html">Pair Programming</a>
+              <a href="../SOFTARC3-RED3/index.html">Apply Skills</a>    
+              <a href="../SOFTARC4-RED3/index.html">UML</a>
+              <a href="../SOFTARC5-RED3/index.html">Use-case diagram</a>
+              <a href="../SOFTARC6-RED3/index.html">Use-case review</a>  
+              <a href="../SOFTARC7-RED3/index.html">Waterfall</a>                     
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Work EXP
+            </button>
+            <div class="dropdown-content">
+                <a href="../WXP-DIARY-RED3/index.html">Diary</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Mobile Tech
+            </button>
+            <div class="dropdown-content">
+              <a href="../MOBT1-RED3/index.html">Prototype app</a>
+              <a href="../MOBT2-RED3/index.html">Android Native Application</a>  
+              <a href="../MOBT3-RED3/index.html">Mast.skill-3</a>
+            </div>
+        </div>
+        <a class="icon" href="javascript:void(0);"  onclick="myFunction()">&#9776;</a>
+</div>
+<br>
+<div class="container">
+  <div class="image">
+    <img src="images/pair-programing.jpeg" alt="pair-programming">
+  </div>
+  <div class="text">
+    <h3>What is pair-Programing ?</h3>
+    <p>Two programmers work together at a single computer. One, the actively writes the code, <br>
+      while the other, the reviews each line as it is written, providing feedback, suggesting <br>
+      improvements, and ensuring overall code quality. The two people would be equally skilled <br>
+      and would each have equal time at the keyboard. <br>
+      <a href="https://www.techtarget.com/searchsoftwarequality/definition/Pair-programming">Techtarget.com</a>
+    </p>
+  </div>
+</div>
+
+<hr>
+
+<div class="container">
+  <div class="image">
+    <img src="images/atvanget.jpeg" alt="pair advantages">
+  </div>
+  <div class="text">
+    <h3>What advantages does pair programming have and where is it best suited for use ? </h3>
+    <p>Pair programming offers several advantages, including improved code quality, faster problem resolution, <br>
+      enhanced knowledge sharing, and increased team communication. earning situations, providing an effective <br>
+      mechanism for skill transfer and problem solving.<br>
+      <a href="https://www.shakebugs.com/blog/benefits-of-pair-programming/">Shakebugs.com</a></p>
+  </div>
+</div>
+
+<hr>
+
+<div class="container">
+  <div class="image">
+    <img src="images/pair.png" alt="pair types">
+  </div>
+  <div class="text">
+    <h3>What do you think are typical pairing of people in pair-programming ?</h3>
+    <p>Two people would be equally skilled. This combination allows for knowledge transfer and <br>
+      collaborative learning environment.pairing programmers with different problem solving <br>
+       approaches or communication styles can bring complementary perspectives to the coding process. <br>
+       <a href="https://www.techtarget.com/searchsoftwarequality/definition/Pair-programming">Techtarget.com</a>
+      </p>
+  </div>
+</div>
+
+<hr>
+
+<div class="container">
+  <div class="image">
+    <img src="images/disanvanged.png" alt="disadvantages">
+  </div>
+  <div class="text">
+    <h3>What disadvantages does pair-programming have ?</h3>
+    <p>Pair programming, while beneficial, may have some drawbacks. It can be resource intensive, <br>
+       requiring two developersto work on a single task, potentially slowing down productivity. <br>
+        Differences in working styles or personalities might lead to conflicts, and some individuals <br>
+         may find the constant collaboration exhausting. <br>
+        <a href="https://medium.com/@cfpcarla/pair-programming-advantages-and-disadvantages-of-pair-programming-1748ed69305">Medium.com</a></p>
+  </div>
+</div>
+
+<hr>
+
+<div class="container">
+  <div class="image">
+    <img src="images/pair.agile.jpg" alt="pair agile">
+  </div>
+  <div class="text">
+    <h3>How would pair-programming work in a Agile environment ?</h3>
+    <p> In an Agile environment, pair programming fits seamlessly into the iterative and collaborative <br>
+       nature of the development process. Teams often use pair programming during sprint cycles to <br>
+        enhance code quality, promote knowledge sharing.Regular retrospectives <br>
+      can be used to refine and optimize the pair programming process within the Agile framework. <br>
+      <a href="https://www.techtarget.com/searchsoftwarequality/definition/Pair-programming">Techtarget.com</a></p>
+  </div>
+</div>
+
+<hr>
+
+<div class="container">
+  <div class="image">
+    <img src="images/agilemanifesto.jpeg" alt="agile manifesto">
+  </div>
+  <div class="text">
+    <h3>Is pair-programming compatible with the Agile manifesto ?</h3>
+    <p>Pair programming aligns well with the Agile Manifesto's principles. Working software, <br>
+       and customer collaboration, pair programming encourages constant communication and <br>
+      collaboration between team members, a shared understanding of the codebase and project goals. <br>
+      <a href="https://www.techtarget.com/searchsoftwarequality/definition/Pair-programming">Techtarget.com</a></p>
+  </div>
+</div>
+
+<hr>
+
+<div class="container">
+  <div class="image">
+    <img src="images/exppair.jpg" alt="pair exp">
+  </div>
+  <div class="text">
+    <h3>How does the Socratic Method benefit pair programming, when one programmer is far less experienced than the other?</h3>
+    <p>The Socratic Method benefits pair programming, especially when there's a skill imbalance. <br>
+      When one programmer is less experienced, the more experienced partner can use questioning to guide and mentor, <br>
+      encouraging the less experienced programmer to think through problems independently. <br>
+      <a href="https://spin.atomicobject.com/socratic-method-pair-programming/">Spin.atomicobject.com</a></p>
+  </div>
+</div>
+
+<hr>
+
+<div class="container">
+  <div class="image">
+    <img src="images/last.png" alt="last">
+  </div>
+  <div class="text">
+    <h3>Why is the pure driver/navigator scenario unhelpful for an inexperienced programmer ?</h3>
+    <p>The pure driver/navigator scenario, where one programmer codes while the other observes, can be unhelpful for an <br>
+      inexperienced programmer as it misses opportunity on learning. Less experienced programmer may struggle to concepts, <br>
+      and understanding of the coding process. <br> 
+      <a href="https://medium.com/@maaretp/the-driver-navigator-in-strong-style-pairing-2df0ecb4f657">Medium.com</a></p>
+  </div>
+</div>
+
+  <div class="hah">
+    <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Ft.fachtnaroe.net%2Fred%2F3%2FSOFTARC2-RED3%2Findex.html" rel="nofollow"
+        target="_blank">Validate</a>
+        &nbsp; &nbsp; &amp; &nbsp; &nbsp;
+        <a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Ft.fachtnaroe.net%2Fred%2F3%2FSOFTARC2-RED3%2Findex.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en" rel="nofollow"
+        target="_blank">Css Validate</a>
+  </div>
+  <script src="../assets/script/navbar.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Use.case.Diagram.Red3</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: grey;
+    }
+
+    .navbar {
+      background-color: lightseagreen;
+      overflow: hidden;
+    }
+
+    .navbar a {
+      float: left;
+      display: block;
+      color: red;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    .navbar .icon {
+      display: none;
+    }
+
+    .dropdown {
+      float: left;
+      overflow: hidden;
+    }
+
+    .dropdown .dropbtn {
+      font-size: 16px;
+      border: none;
+      outline: none;
+      color: red;
+      padding: 14px 16px;
+      background-color: inherit;
+      font-family: inherit;
+      margin: 0;
+    }
+
+    .navbar a:hover,
+    .dropdown:hover .dropbtn {
+      background-color: black;
+      color: white;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px red;
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      float: none;
+      color: red;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+
+    .dropdown-content a:hover {
+      background-color: black;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    @media screen and (max-width: 800px) {
+
+      .navbar a:not(:first-child),
+      .dropdown .dropbtn {
+        display: none;
+      }
+
+      .navbar a.icon {
+        float: right;
+        display: block;
+      }
+
+      .navbar a:hover,
+      .dropdown:hover .dropbtn {
+        background-color: white;
+        color: black;
+      }
+
+      .dropdown-content a:hover {
+        background-color: goldenrod;
+      }
+    }
+
+    @media screen and (max-width: 800px) {
+      .navbar.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+
+      .navbar.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+      }
+
+      .navbar.responsive .dropdown {
+        float: none;
+      }
+
+      .navbar.responsive .dropdown-content {
+        position: relative;
+      }
+
+      .navbar.responsive .dropdown .dropbtn {
+        display: block;
+        width: 100%;
+        text-align: left;
+      }
+    }
+
+    hr {
+      width: 85%;
+      box-shadow: 0 0 3px red;
+      animation: glowMinr 2s ease-in-out;
+      -webkit-animation: glow 1.5s ease-in-out infinite;
+    }
+
+    @keyframes glow {
+      0% {
+        box-shadow: 0 0 2px red;
+      }
+
+      50% {
+        box-shadow: 0 0 8px red;
+      }
+
+      100% {
+        box-shadow: 0 0 2px red;
+      }
+    }
+
+    .hah {
+      background-color: lightseagreen;
+      overflow: hidden;
+      text-align: center;
+      font-size: 18px;
+      display: block;
+      padding: 0;
+      border: none;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      padding-left: 5%;
+    }
+
+    .image img {
+      max-width: 100%;
+      max-height: 100%;
+      width: 550px;
+    }
+
+    .text {
+      font-size: 17px;
+      padding-left: 20px;
+    }
+
+    h3 {
+      font-size: 25px;
+      padding-left: 5%;
+    }
+    ol{
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="navbar" id="myNavbar">
+    <a href="../index.html">Home</a>
+    <div class="dropdown">
+      <button class="dropbtn">Web-Project
+      </button>
+      <div class="dropdown-content">
+        <a href="../bmi.html">BMI</a>
+        <a href="../history.html">History</a>
+        <a href="../reference.html">Reference</a>
+        <a href="https://t.fachtnaroe.net">About</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Sofware Architecture
+      </button>
+      <div class="dropdown-content">
+        <a href="../SOFTARC1-RED3/index.html">Moder methodlogy</a>
+        <a href="../SOFTARC2-RED3/index.html">Pair Programming</a>
+        <a href="../SOFTARC3-RED3/index.html">Apply skills</a>
+        <a href="../SOFTARC4-RED3/index.html">UML</a>
+        <a href="../SOFTARC5-RED3/index.html">Use-case diagram</a>
+        <a href="../SOFTARC6-RED3/index.html">Use-case review</a>
+        <a href="../SOFTARC7-RED3/index.html">Waterfall</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Work EXP
+      </button>
+      <div class="dropdown-content">
+        <a href="../WXP-DIARY-RED3/index.html">Diary</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Mobile Tech
+      </button>
+      <div class="dropdown-content">
+        <a href="../MOBT1-RED3/index.html">Prototype app</a>
+        <a href="../MOBT2-RED3/index.html">Android Native Application</a>  
+        <a href="../MOBT3-RED3/index.html">Mast.skill-3</a>
+      </div>
+    </div>
+    <a class="icon" href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
+  </div>
+
+  <h2>What a use-case is?</h2>
+  <div class="container">
+    <div class="image">
+      <img src="images/use.case.diagram.png" alt="use case diagram">
+    </div>
+    <div class="text">
+      <h4>UML, use case diagram is the primary form of system software requirements for a new software program
+        underdeveloped. <br>
+        Use cases specify the expected behavior, and not the exact method of making it happen. <br>
+        Use cases once specified can be denoted, textual and visual representation (use case diagram). <br>
+        Use case modeling is that it helps us design a system from the end user's perspective. <br>
+        Communicating system behavior in the user's terms specifying all externally visible system behavior.</h4>
+    </div>
+  </div>
+  <hr>
+  <h2>Enumerate the elements that may be represented in a UML use-case diagram.</h2>
+  <div class="text">
+    <h4> UML, use-case diagrams model the behavior of a system and help to capture the requirements of the system. <br>
+      Use case diagrams describe the functions and scope of a system. Diagrams also identify the interactions between
+      the system and its actors. <br>
+      Use case diagrams illustrate and define the context and requirements of either an entire system or the important
+      parts of the system.</h4>
+  </div>
+  <h3>Actor:</h3>
+  <div class="container">
+    <div class="image">
+      <img src="images/use.case.elements.png" alt="use case elements">
+    </div>
+    <div class="text">
+      <h4>An actor represents a role of a user that interacts with the system that you are modeling. <br>
+        The user can be a human user, an organization, a machine, or another external system.</h4>
+    </div>
+  </div>
+  <h3>Use-Case:</h3>
+  <div class="container">
+    <div class="image">
+      <img src="images/uml.png" alt="use case">
+    </div>
+    <div class="text">
+      <h4>A use case describes a function that a system performs to achieve the user's goal. <br>
+        A use case must yield an observable result that is of value to the user of the system.</h4>
+    </div>
+  </div>
+  <h3>System boundary:</h3>
+  <div class="container">
+    <div class="image">
+      <img src="images/use.case.bon.webp" alt="System boundary ">
+    </div>
+    <div class="text">
+      <h4>The system boundary defines the scope of the system being modeled in the use-case diagram. <br>
+        It's depicted as a box around the system's components.</h4>
+    </div>
+  </div>
+  <h3>Relationships (extends, includes, data transfer):</h3>
+  <div class="container">
+    <div class="image">
+      <img src="images/use.case.Relationships.png" alt="use case relationships">
+    </div>
+    <div class="text">
+      <h4>
+        In a use-case diagram, relationships define connections and interactions between different elements such as
+        actors and use cases</h4>
+        <ol>
+          <li>Extends: <br> Indicates that one use case may optionally extend another use case under certain
+            conditions.<br></li>
+          <li>Includes: <br> Indicates that one use case includes the behavior of another use case. <br>
+            One use case needs the functionality provided by another use case to complete its own functionality.</li>
+          <li>Data Transfer: <br> Standard relationship in UML use case diagrams, data transfer flow between <br>
+            actors and use cases can be depicted using labels. This represents the flow of data between actors and the
+            system.</li>
+        </ol>
+      
+    </div>
+  </div>
+  <hr>
+  <h3>Understand the relationship between the different elements, the differences between them, and enumerate them from
+    our system :</h3>
+  <div class="text">
+    <h4>
+      A system can be defined as a collection of components that work together to achieve a goal. The components of a
+      system are<br>
+      the individual parts that make up the system and functions or tasks within the system. The relationship between a
+      system and<br>
+      its components. Each component is reliant on the others to function effectively, and together they work to achieve
+      the goal<br>
+      of the system. Changes to one component can have a significant impact on the functioning of the system.In addition
+      to the components,<br>
+      a system is also influenced by its environment. the external factors and conditions that affect the system, but
+      are outside of its control.<br>
+      The relationship between a system and its environment is one of interaction and adaptation. The system must be
+      able to respond to changes<br>
+      in its environment in order to maintain its effectiveness. This may involve modifying the system's components or
+      adjusting its strategies<br>
+      and plans in response to changing conditions.Overall, the relationships between a system, its components, and its
+      environment are complex and<br>
+      dynamic, and require ongoing management and adaptation in order to ensure the system's success.
+    </h4>
+  </div>
+  <hr>
+  <h3>Create a use-case diagram using any available tools, or by hand:</h3>
+  <div class="container">
+    <div class="image">
+      <img src="images/use.case.diagram.2.PNG" alt="use case diagram">
+    </div>
+    <div class="text">
+      <h4>This use case diagram shows that I can create use case diagrams. <br>
+        created at<br>
+        <a href="https://www.figma.com">Figma website.</a>
+      </h4>
+    </div>
+  </div>
+
+  <div class="hah">
+    <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Ft.fachtnaroe.net%2Fred%2F3%2FSOFTARC5-RED3%2Findex.html" rel="nofollow" target="_blank">Validate</a>
+    &nbsp; &nbsp; &amp; &nbsp; &nbsp;
+    <a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Ft.fachtnaroe.net%2Fred%2F3%2FSOFTARC5-RED3%2Findex.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en" rel="nofollow"
+        target="_blank">Css Validate</a>
+  </div>
+  <script src="../assets/script/navbar.js"></script>
+</body>
+
+</html>
